@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>UX Accessibility Scanner</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        width: 400px;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      #status {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      button {
+        margin-right: 10px;
+        padding: 5px 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      #results {
+        margin-top: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        padding: 5px;
+        background: #f9f9f9;
+      }
+
+      .issue-card {
+        border: 1px solid #ccc;
+        background: #fff;
+        padding: 5px 8px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+      }
+
+      .issue-title {
+        font-weight: bold;
+        color: #446362;
+      }
+
+      .issue-desc {
+        margin: 3px 0;
+        font-size: 13px;
+        color: #555;
+      }
+
+      .snapshot-thumb {
+        max-width: 100%;
+        max-height: 100px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+      }
+
+      .issue-meta {
+        font-size: 11px;
+        color: #888;
+      }
+
+      #totalCount {
+        margin-top: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>UX Accessibility Scanner</h2>
+
+    <div>
+      <button id="scanBtn">Scan Current Page</button>
+      <button id="exportCsvBtn" disabled>Export CSV</button>
+      <button id="exportPdfBtn" disabled>Export PDF</button>
+    </div>
+
+    <div id="status">Ready</div>
+
+    <div id="results"></div>
+    <div id="totalCount">Total: 0</div>
+
+    <script src="popup.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="jspdf.plugin.autotable.js"></script>
+  </body>
+</html>

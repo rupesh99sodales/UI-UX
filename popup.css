@@ -1,0 +1,76 @@
+:root {
+  font-family: Inter, system-ui, Segoe UI, Arial;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 520px;
+  padding: 12px;
+}
+header h1 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+button {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.status {
+  margin-bottom: 8px;
+}
+.counts {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.results {
+  list-style: none;
+  padding: 0;
+  max-height: 260px;
+  overflow: auto;
+  border-top: 1px solid #eee;
+}
+.result-item {
+  padding: 8px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.issue-title {
+  font-weight: 600;
+}
+.issue-meta {
+  font-size: 12px;
+  color: #666;
+}
+.issue-actions {
+  margin-top: 6px;
+}
+.issue-actions button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+footer {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #888;
+}
+details summary {
+  cursor: pointer;
+  padding: 6px 0;
+  font-weight: 600;
+}
+textarea {
+  box-sizing: border-box;
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Accessibility Scan",
+  "version": "2.1.0",
+  "description": "Full-page accessibility scanner with export and snapshots.",
+  "permissions": ["scripting", "activeTab", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Accessibility Scanner"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["axe.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
